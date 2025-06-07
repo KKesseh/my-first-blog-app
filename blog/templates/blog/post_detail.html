@@ -3,8 +3,8 @@
   <aside class="actions">
     {% if user.is_authenticated %}
     <a class="btn btn-secondary" href="{% url 'post_edit' pk=post.pk %}">
-      {% comment %} {% include './icons/pencil-fill.svg' %} {% endcomment %}
-      <img src="{% static 'icons/pencil-fills.svg' %}" />
+      {% include './icons/pencil-fill.svg' %} {% comment %}
+      <img src="{% static 'icons/pencil-fills.svg' %}" /> {% endcomment %}
     </a>
     {% endif %}
   </aside>
