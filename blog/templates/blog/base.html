@@ -22,7 +22,16 @@
   <body>
     <header class="page-header">
       <div class="container">
-        <h1><a href="">Django Girls Blog App</a></h1>
+
+        {% if user.is_authenticated  %}
+          <a href={% url "post_new" %} class="top-menu">
+            {% comment %} {% include "./icons/file-earmark-plus.svg" %} {% endcomment %}
+            {% comment %} {% include "b/icons/pencil-fills.svg" %} {% endcomment %}
+            <img src="{% static 'icons/file-earmark-plus.svg' %}" >
+          </a>
+        {% endif %}
+        
+        <h1><a href={% url "post_list" %}>Django Girls Blog App</a></h1>
       </div>
     </header>
 
