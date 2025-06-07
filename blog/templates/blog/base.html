@@ -25,8 +25,7 @@
 
         {% if user.is_authenticated  %}
           <a href={% url "post_new" %} class="top-menu">
-            {% include "./icons/file-earmark-plus.svg" %}
-            {% comment %} <img src="{% static 'icons/file-earmark-plus.svg' %}" > {% endcomment %}
+            <img src="{% static 'icons/file-earmark-plus.svg' %}" >
           </a>
         {% endif %}
         
